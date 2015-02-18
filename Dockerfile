@@ -12,5 +12,7 @@ RUN git clone https://github.com/c9/core.git /c9sdk
 WORKDIR /c9sdk
 RUN scripts/install-sdk.sh
 
-ENTRYPOINT node server.js -p 8181 -l 0.0.0.0
+ADD start.sh /start.sh
+RUN chmod +x /start.sh
 
+ENTRYPOINT /start.sh
