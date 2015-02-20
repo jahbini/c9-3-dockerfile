@@ -4,7 +4,7 @@ MAINTAINER Diego Perez <eazel7@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update
 RUN apt-get install -q -y git curl build-essential python software-properties-common
-RUN apt-add-repository ppa:chris-lea/node.js
+RUN apt-add-repository -y ppa:chris-lea/node.js
 RUN apt-get update
 RUN apt-get install -q -y nodejs
 
